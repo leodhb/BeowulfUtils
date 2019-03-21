@@ -1,4 +1,6 @@
-![alt text](https://mulheresexatas.ifal.edu.br/img/logoIFAL.png)
+<p align="center">
+  <img src="https://mulheresexatas.ifal.edu.br/img/logoIFAL.png" width="350" title="hover text">
+</p>
 
 # Utilitários para montagem de um cluster de alto desempenho (Beowulf)
 
