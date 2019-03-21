@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://mulheresexatas.ifal.edu.br/img/logoIFAL.png" width="350" title="hover text">
+  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/ifal.png" width="350" title="hover text">
 </p>
 
 # Utilitários para montagem de um cluster de alto desempenho (Beowulf)
