@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://travis-ci.org/leodhb/beowulf-utils)
+![alt text](https://mulheresexatas.ifal.edu.br/img/logoIFAL.png)
 
 # Utilitários para montagem de um cluster de alto desempenho (Beowulf)
 
