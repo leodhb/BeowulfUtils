@@ -1,0 +1,16 @@
+#!/bin/bash
+/usr/bin/clear
+param1=$1
+/bin/rm -f /etc/beowulf/cargau  2>  /dev/null
+/bin/touch /etc/beowulf/cargau
+carga1="top -n1 -b |grep"
+carga2="|head -n1|cut -c -14,45-"
+echo "NODE		PID USER	%CPU %MEM  TIME COMMAND"
+echo "-----------------------------------------"
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+ do
+  rsh $node $carga1 $param1 $carga2 >&1 2>&1 | \
+  sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:" /g" >> /etc/beowulf/cargau
+  tail -n 1 /etc/beowulf/cargau
+ done

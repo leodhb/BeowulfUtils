@@ -1,0 +1,46 @@
+#!/bin/bash
+# /etc/rc.d/init.d/masquerading
+# chkconfig: 2345 90 10
+# description: mascaramento de ip
+
+MODPROBE=/sbin/modprobe
+IPTABLES=/sbin/iptables
+prog=masquerading
+
+$MODPROBE ip_conntrack_ftp
+$MODPROBE ip_nat_ftp
+case "$1" in
+	start)
+		echo -n $"Starting $prog: "
+		$IPTABLES -F
+		$IPTABLES -F -t nat
+		$IPTABLES -F -t mangle
+		$IPTABLES -t nat -A POSTROUTING -i eth1 -o eth0 -j MASQUERADE
+		echo
+		;;
+	stop)
+		echo -n $"Stopping $prog: "
+		$IPTABLES -F
+		$IPTABLES -F -t nat
+		$IPTABLES -F -t mangle
+		echo
+		;;
+	restart)
+		echo -n $"Restarting $prog: " 
+		$0 stop
+		$0 start
+		echo
+		;;
+	status)
+		echo -n $"Status $prog: "
+		$IPTABLES -L
+		$IPTABLES -L -t nat
+		$IPTABLES -L -t mangle
+		echo
+		;;
+	*)
+		echo -n $"Usage: $0 {start|stop|restart|status}"
+		echo
+		;;
+esac
+exit 0

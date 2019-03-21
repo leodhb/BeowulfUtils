@@ -1,0 +1,14 @@
+#!/bin/bash
+/usr/bin/clear
+/bin/rm -f /etc/beowulf/ram  2>  /dev/null
+/bin/touch /etc/beowulf/ram
+mem="top -n1 -b |grep \"Mem:\"|cut -c -47"
+echo "A memoria RAM usada pelo sistema e"
+echo "----------------------------------"
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+ do
+  rsh "$node" "$mem" >&1 2>&1|sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:"	/g" >> \
+  /etc/beowulf/ram
+  tail -n 1 /etc/beowulf/ram
+ done

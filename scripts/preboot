@@ -1,0 +1,14 @@
+#!/bin/bash
+/usr/bin/clear
+hostnode=`sed '/#/d' /etc/beowulf/hostnode | cat`
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+  do
+	if [ "$node" != "$hostnode" ]
+	then
+	echo "Reinicializando $node"
+	rsh "$node" /sbin/reboot >&1 2>&1|sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:" /g"
+	fi
+ 
+  done
+echo "Reinicializando $hostnode"   
+/sbin/reboot

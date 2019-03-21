@@ -1,0 +1,18 @@
+#!/bin/bash
+param1=$1
+/usr/bin/clear
+passwd $param1
+grep ^$param1 /etc/shadow > /tmp/shadow.tmp 2> /dev/null
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	echo executando comando em $node
+	echo ""
+	rcp /tmp/shadow.tmp $node:/tmp/shadow.tmp1 
+	rsh $node sed '/^$param1/d' /etc/shadow > /tmp/shadow.tmp2 
+	rsh $node cat /tmp/shadow.tmp1 >> /tmp/shadow.tmp2
+	rsh $node cp /tmp/shadow.tmp2 /etc/shadow
+	rsh $node rm /tmp/shadow.* 
+	echo ""
+done
+

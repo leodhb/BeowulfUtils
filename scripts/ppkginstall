@@ -1,0 +1,13 @@
+#!/bin/bash
+param1=$@
+/usr/bin/clear
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	echo executando comando em $node
+	echo ""
+	rsh $node /bin/mkdir /var/beowulf
+	rcp $param1 $node:/var/beowulf
+	rsh $node /usr/bin/dpkg -i /var/beowulf/$param1
+	rsh $node /bin/rm -rf /var/beowulf
+	echo ""
+done

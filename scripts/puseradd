@@ -1,0 +1,12 @@
+#!/bin/bash
+param1=$1
+/usr/bin/clear
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	echo executando comandos em $node
+	echo ""
+        rsh $node groupadd -g $param1
+        rsh $node adduser $param1 -g $param1 -d /cluster/global/home/$param1 -s /bin/bash -m -k /etc/shell
+	echo ""
+done

@@ -1,0 +1,13 @@
+#!/bin/bash
+param1=$1
+/usr/bin/clear
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	echo executando comandos em $node
+	echo ""
+	userdel -r $param1
+	echo ""
+done
+
+

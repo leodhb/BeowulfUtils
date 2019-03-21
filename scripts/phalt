@@ -1,0 +1,13 @@
+#!/bin/bash
+/usr/bin/clear
+hostnode=`sed '/#/d' /etc/beowulf/hostnode | cat`
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	if [ "$node" != "$hostnode" ]
+	then
+	echo "Desligando $node"
+	rsh "$node" /sbin/halt >&1 2>&1|sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:" /g"
+	fi 
+done
+echo "Desligando $hostnode"
+/sbin/halt

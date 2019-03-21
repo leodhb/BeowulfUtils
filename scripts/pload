@@ -1,0 +1,14 @@
+#!/bin/bash
+/usr/bin/clear
+/bin/rm -f /etc/beowulf/carga  2>  /dev/null
+/bin/touch /etc/beowulf/carga
+carga="top -n1 -b |grep \"load average:\"|cut -c 11-"
+echo "A carga do sistema é:"
+echo "---------------------"
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+ do
+	rsh "$node" "$carga" >&1 2>&1|sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:" /g" >> \
+	/etc/beowulf/carga
+	tail -n 1 /etc/beowulf/carga
+ done
+

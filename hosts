@@ -1,0 +1,17 @@
+# /etc/hosts
+127.0.0.1     localhost     localdomain
+
+# Servidor 
+m.m.m.m     frontend.linux.org.br
+
+# Clientes
+192.168.0.1     beowulf-01  # o proprio no servidor.
+192.168.0.2     beowulf-02
+192.168.0.3     beowulf-03
+192.168.0.4     beowulf-04
+192.168.0.5     beowulf-05
+192.168.0.6     beowulf-06
+192.168.0.7     beowulf-07
+192.168.0.8     beowulf-08
+192.168.0.9     beowulf-09
+192.168.0.10    beowulf-10

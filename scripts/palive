@@ -1,0 +1,22 @@
+#!/bin/bash
+/usr/bin/clear
+/bin/rm -f  /etc/beowulf/ativos  2>  /dev/null
+/bin/touch  /etc/beowulf/ativos
+
+   for node in `sed '/#/d' /etc/beowulf/clusternodes |cat`
+   do
+        ping -c2 $node
+	echo ""
+        if [  $? -gt  0 ]
+        then
+           echo "O $node nao esta respondendo"
+        else
+           echo "O $node está ativo"
+	   echo "$node" >> /etc/beowulf/ativos
+	   echo ""
+	fi
+   done
+echo ""
+echo "Os nos ativos são:"
+echo "------------------"
+cat /etc/beowulf/ativos

@@ -1,0 +1,2 @@
+/cluster /etc/auto.cluster --timeout=5
+

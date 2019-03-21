@@ -1,0 +1,11 @@
+#!/bin/bash
+param1=$1
+param2=$2
+/usr/bin/clear
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+do
+	echo executando comando em $node
+	echo ""
+	rcp -r $param1 $node:$param2
+	echo ""
+done

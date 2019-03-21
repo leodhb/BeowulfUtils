@@ -1,0 +1,14 @@
+#!/bin/bash
+/usr/bin/clear
+/bin/rm -f /etc/beowulf/swap  2>  /dev/null
+/bin/touch /etc/beowulf/swap
+swap="top -n1 -b |grep \"Swap:\"|cut -c -47"
+echo "O SWAP usado pelo sistema e"
+echo "---------------------------"
+
+for node in `sed '/#/d' /etc/beowulf/clusternodes | cat`
+ do
+  rsh "$node" "$swap" >&1 2>&1|sed "s/^/"`echo $node|cut -f 1 -d '.'|cut -c -10`:" /g" >> \
+  /etc/beowulf/swap
+  tail -n 1 /etc/beowulf/swap
+ done
