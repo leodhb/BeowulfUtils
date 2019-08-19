@@ -19,8 +19,8 @@
 
 ## Instruções
 
-1. Com as máquinas conectadas a internet, executar o seguinte comando:
-<code>sudo apt install make patch xorg-dev libpng-dev gcc g++</code>
+1. Com as máquinas conectadas a internet, executar o seguinte comando: <br>
+<code>sudo apt install make patch xorg-dev libpng-dev gcc g++</code><br>
 Ele irá instalar as dependencias iniciais para a implementação do cluster.
 
 2.
