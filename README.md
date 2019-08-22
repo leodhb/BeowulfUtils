@@ -35,7 +35,12 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 </p>
   Após os procedimentos acima, os diretórios /usr e /lib do nó mestre estarão sendo compartilhados por todos os nós.
   
-  
+4. Agora precisamos configurar o acesso remoto entre as máquinas, utilizando o protocolo SSH. A ideia é que as máquinas possam ser acessadas remotamente do nó mestre sem a necessidade de uma senha.
+<p align="center">
+  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
+</p>
+
+
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
 
