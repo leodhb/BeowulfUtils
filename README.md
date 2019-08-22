@@ -25,15 +25,13 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 
 2. Para que as máquinas consigam se encontrar dentro da rede, é necessário alterar algumas configurações do sistema. Primeiro, vamos em <code>/etc/hosts</code> e adicionamos as seguintes linhas, em todos os nós.
 <br>
-<code>
-auto eth0
-iface eth0 inet static
-address 192.168.0.10
-netmask 255.255.255.0
-network 192.168.0.0
-broadcast 192.168.0.255
-gateway 192.168.0.1
-</code>
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
 
