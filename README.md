@@ -14,8 +14,8 @@
 
 1. Sistema operacional linux (de preferência baseado no dedian)
 2. Usuário: root
-3. Hostname: beowulf-XX (01 - 99, onde 01 será o nó principal)
-4. IP local único
+3. Hostname: mestre (para a máquina principal) e noX (no01, no02...para os outros nós)
+4. IP local único (procedimento feito no servidor DHCP)
 
 ## Instruções
 
@@ -23,13 +23,10 @@
 <code>sudo apt install make patch xorg-dev libpng-dev gcc g++</code><br>
 Ele irá instalar as dependencias iniciais para a implementação do cluster.
 
-2. Para que as máquinas consigam se encontrar dentro da rede, é necessário alterar algumas configurações do sistema. Primeiro, vamos em <code>/etc/hosts</code> e adicionamos as seguintes linhas, em todos os nós.
-<br>
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+2. Para que as máquinas consigam se encontrar dentro da rede, é necessário alterar algumas configurações do sistema. Primeiro, adicionamos as seguintes linhas, em todos os nós:
+<p align="center">
+  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela1.png" width="500" title="hover text">
+</p>
 
 
 ## Comandos
