@@ -40,27 +40,9 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
   <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
 </p>
 A partir daqui, se executarmos o comando <code>ssh no01</code> ou <code>ssh no02</code>, ele não deve pedir senha.
-<br>
+<br><br>
 5.Com a comunicação entre os nós totalmente estabelecida, precisamos instalar a biblioteca de troca de mensagens (MPI), para executar determinados processos de forma distribuida.
 <p align="center">
   <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela4.png" width="900" title="hover text">
 </p>
-## Comandos
-Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
-
-1. palive: exibe todos os nós ativos do cluster
-2. pmem: exibe a memória usada pelo cluster
-3. pswap: exibe a memória swap usada pelo cluster
-4. pload: exibe a carga de processamento dos nós do cluster
-5. pexec: executa comandos linux em todos os nós do cluster
-6. preboot: reinicia o cluster
-7. phalt: desliga o cluster
-8. prep: replica arquivos no cluster
-9. prepr: replica diretórios no cluster
-10. pcp: copia arquivos no cluster
-11. pcpr: pcp: copia arquivos no cluster
-12. padduser: adiciciona usuários no cluster
-13. ppasswd: definie a senha de um user no cluster
-14. puserdel: remove um usuário no cluster
-15. ppkginstall: instala pacotes no cluster
-16. ppkgremove: remove um pacote no cluster
+<br><br>Após todos os procedimentos, testados e aprovados até a data do último commit (22/08/2018), nosso cluster beowulf está pronto para executar programas com processamento compartilhado, de forma muito mais rápida que computadores convencionais. É possível realizar o procedimento em casa, se você tiver duas ou mais máquinas sobrando, e é altamente vantajoso para determinadas atividades.
