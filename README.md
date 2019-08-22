@@ -33,7 +33,9 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 <p align="center">
   <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela2.png" width="900" title="hover text">
 </p>
-
+  Após os procedimentos acima, os diretórios /usr e /lib do nó mestre estarão sendo compartilhados por todos os nós.
+  
+  
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
 
