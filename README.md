@@ -25,7 +25,7 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 
 2. Para que as máquinas consigam se encontrar dentro da rede, é necessário alterar algumas configurações do sistema. Primeiro, adicionamos as seguintes linhas, em todos os nós:
 <p align="center">
-  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela1.png" width="500" title="hover text">
+  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela1.png" width="900" title="hover text">
 </p>
 
 
