@@ -40,7 +40,7 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
   <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
 </p>
 A partir daqui, se executarmos o comando <code>ssh no01</code> ou <code>ssh no02</code>, ele não deve pedir senha.
-
+<br>
 5.Com a comunicação entre os nós totalmente estabelecida, precisamos instalar a biblioteca de troca de mensagens (MPI), para executar determinados processos de forma distribuida.
 <p align="center">
   <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela4.png" width="900" title="hover text">
