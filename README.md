@@ -37,7 +37,7 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
   
 4. Agora precisamos configurar o acesso remoto entre as máquinas, utilizando o protocolo SSH. A ideia é que as máquinas possam ser acessadas remotamente do nó mestre sem a necessidade de uma senha.
 <p align="center">
-  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
+  <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
 </p>
 
 
