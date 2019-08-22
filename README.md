@@ -26,8 +26,8 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 2. Para que as máquinas consigam se encontrar dentro da rede, é necessário alterar algumas configurações do sistema. Primeiro, adicionamos as seguintes linhas, em todos os nós:
 <p align="center">
   <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela1.png" width="900" title="hover text">
-</p>
-
+</p><br>
+Após isso, reinicie a rede em todos os nós utilizando o comando <code>sudo ./etc/init.d/networking restart</code><br>
 
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
