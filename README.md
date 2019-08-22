@@ -29,7 +29,10 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 </p>
   Após isso, reinicie a rede em todos os nós utilizando o comando <code>sudo ./etc/init.d/networking restart</code><br><br>
 
-3. Feita a configurações de rede necessárias, precisamos configurar um sistema de arquivos compartilhado, para que os processos possam ser executados de forma paralela no cluster. Para tal, usaremos um servidor NFS, que pode ser instalado através do comando <code>sudo apt install nfs-kernel-server</code><br>
+3. Feita a configurações de rede necessárias, precisamos configurar um sistema de arquivos compartilhado, para que os processos possam ser executados de forma paralela no cluster. Para tal, usaremos um servidor NFS, que pode ser instalado através do comando <code>sudo apt install nfs-kernel-server</code><br> Feiro isso, precisamos configurar o NFS adequadamente em todos os nós. Para que possa montar as pastas realizar essa montagem logo na inicialização do cluster.
+<p align="center">
+  <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela2.png" width="900" title="hover text">
+</p>
 
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
