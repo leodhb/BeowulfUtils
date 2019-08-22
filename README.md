@@ -27,7 +27,7 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 <p align="center">
   <img src="https://raw.github.com/leodhb/beowulf-utils/master/raw/tabela1.png" width="900" title="hover text">
 </p>
-  Após isso, reinicie a rede em todos os nós utilizando o comando <code>sudo ./etc/init.d/networking restart</code><br>
+  Após isso, reinicie a rede em todos os nós utilizando o comando <code>sudo ./etc/init.d/networking restart</code><br><br>
 
 3. Feita a configurações de rede necessárias, precisamos configurar um sistema de arquivos compartilhado, para que os processos possam ser executados de forma paralela no cluster. Para tal, usaremos um servidor NFS, que pode ser instalado através do comando <code>sudo apt install nfs-kernel-server</code><br>
 
