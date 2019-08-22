@@ -39,7 +39,7 @@ Ele irá instalar as dependencias iniciais para a implementação do cluster.
 <p align="center">
   <img src="https://raw.githubusercontent.com/leodhb/beowulf-utils/master/raw/tabela3.png" width="900" title="hover text">
 </p>
-
+A partir daqui, se executarmos o comando <code>ssh no01</code> ou <code>ssh no02</code>, ele não deve pedir senha.
 
 ## Comandos
 Os comandos aqui possuem a sintaxe padrão do linux. Caso tenha dúvidas, favor checar a documentação do comando (sem o primeiro P)
